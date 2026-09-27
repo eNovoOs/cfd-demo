@@ -106,7 +106,33 @@ footer .w{flex-direction:column;align-items:flex-start;gap:18px}
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "yoqzhupcqt");
 </script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1161526882203012');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+<script>
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.btn, button');
+  if (!b || typeof fbq !== 'function') return;
+  fbq('track', 'ViewContent', {
+    content_name: (b.textContent || '').trim().slice(0, 80),
+    content_category: document.title.split('|')[0].trim()
+  });
+}, true);
+</script>
 </head><body>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1161526882203012&ev=PageView&noscript=1" alt=""></noscript>
+
 <header><div class="w"><a href="index.html"><img src="assets/logo-color.png" alt="Child & Family Development"></a>
 <input type="checkbox" id="menu" class="mt"><label for="menu" class="mb" aria-label="Menu"><i></i><i></i><i></i></label>
 <nav><a href="index.html">Home</a><a href="harbor-academy.html">Harbor Academy</a><a href="dir-floortime.html">DIR/Floortime</a><a href="therapies.html">Therapies</a><a href="team.html">Team</a><a class="btn navy" href="#book">Book a free consultation</a></nav></div></header>
