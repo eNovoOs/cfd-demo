@@ -80,6 +80,9 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:10px;font-weight:6
 .price{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
 .price div{border:1px solid var(--mist);border-radius:16px;padding:22px;background:#fff}
 .price b{display:block;font-family:Forum,serif;font-size:36px;color:var(--navy);line-height:1;margin-bottom:8px;font-weight:400}
+.cal{padding:14px;min-height:560px}
+.cal iframe{width:100%;border:0;display:block}
+.cal .note a{color:var(--navy);font-weight:700}
 @media(max-width:760px){
 .w{padding:0 20px}
 header .w{height:auto;justify-content:center;padding:14px 20px}
@@ -100,6 +103,7 @@ section{padding:56px 0}
 .pic{height:200px}.founder .pic{height:320px}
 .tq{grid-template-columns:1fr}
 .form{padding:24px}.form .row{grid-template-columns:1fr}
+.cal{padding:10px;min-height:620px}
 .cards{grid-template-columns:1fr;gap:14px}
 .sticky{display:block}body{padding-bottom:88px}
 .price{grid-template-columns:1fr;gap:12px}
@@ -200,12 +204,17 @@ document.addEventListener('click', function (e) {
 <section class="final" id="book"><div class="w split" style="align-items:center"><div>
 <h2>Come see the classroom.</h2>
 <p class="lede">Book a free consultation and tour. Pick a time on the next screen. We also email you the booking link, and remind you before your visit.</p></div>
-<div class="form" data-clarity-mask="true">
-<div class="row"><div><label>Parent name</label><div class="f">First and last name</div></div><div><label>Phone</label><div class="f">(973) 555 0100</div></div></div>
-<label>Email</label><div class="f">you@email.com</div>
-<div class="row"><div><label>Program</label><div class="f">Harbor Academy</div></div><div><label>Location</label><div class="f">Oakland, NJ</div></div></div>
-<p class="note">Please do not include medical or insurance details here.</p>
-<a class="btn navy" href="thank-you.html" style="margin-top:20px;display:block;text-align:center">Continue to booking</a></div></div></section>
+<div class="form cal" data-clarity-mask="true">
+<script type="text/javascript" src="https://platform.osenovo.com/assets/scripts/prospectconnect-integrate-widgets.js"></script>
+<script>
+  var currentScriptElement = document.currentScript;
+    createCalendar({
+      calendarId: "6ab8c8cd54c856ed7e6b918c",
+      callingElement: currentScriptElement,
+      });
+</script>
+<p class="note">Please do not include medical or insurance details here. Prefer to talk to someone? Call <a href="tel:9738309248">973-830-9248</a>.</p>
+</div></div></section>
 
 <footer><div class="w"><img src="assets/logo-white.png" alt=""><div>Child &amp; Family Development<br>350 Ramapo Valley Rd, Suite 100, Oakland, NJ 07436<br><a href="tel:9738309248">973-830-9248</a></div></div></footer>
 

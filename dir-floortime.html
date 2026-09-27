@@ -65,6 +65,9 @@ footer .w{display:flex;justify-content:space-between;align-items:center}
 footer img{height:106px}
 footer a{color:#fff;text-decoration:none}
 footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:10px;font-weight:600}
+.cal{padding:14px;min-height:560px}
+.cal iframe{width:100%;border:0;display:block}
+.cal .note a{color:var(--navy);font-weight:700}
 @media(max-width:760px){
 .w{padding:0 20px}
 header .w{height:auto;flex-wrap:wrap;padding:8px 20px}
@@ -92,6 +95,7 @@ section{padding:56px 0}
 .pic{height:200px}.founder .pic{height:320px}
 .tq{grid-template-columns:1fr}
 .form{padding:24px}.form .row{grid-template-columns:1fr}
+.cal{padding:10px;min-height:620px}
 footer .w{flex-direction:column;align-items:flex-start;gap:18px}
 }
 </style><script type="text/javascript">
@@ -198,12 +202,17 @@ document.addEventListener('click', function (e) {
 <h2>Come see the room.</h2>
 <p class="lede">Book a free consultation and tour. Pick a time on the next screen. We also email you the booking link, and remind you before your visit.</p>
 <p class="note">Fairfield location coming soon. Choose it below to join the waitlist.</p></div>
-<div class="form" data-clarity-mask="true">
-<div class="row"><div><label>Parent name</label><div class="f">First and last name</div></div><div><label>Phone</label><div class="f">(973) 555 0100</div></div></div>
-<label>Email</label><div class="f">you@email.com</div>
-<div class="row"><div><label>Program</label><div class="f">DIR/Floortime Day Program</div></div><div><label>Location</label><div class="f">Oakland, NJ</div></div></div>
-<p class="note">Please do not include medical or insurance details here.</p>
-<a class="btn pink" href="thank-you.html" style="margin-top:20px;display:block;text-align:center">Continue to booking</a></div></div></section>
+<div class="form cal" data-clarity-mask="true">
+<script type="text/javascript" src="https://platform.osenovo.com/assets/scripts/prospectconnect-integrate-widgets.js"></script>
+<script>
+  var currentScriptElement = document.currentScript;
+    createCalendar({
+      calendarId: "6ab8ca4e54c856ed7e6b9478",
+      callingElement: currentScriptElement,
+      });
+</script>
+<p class="note">Please do not include medical or insurance details here. Prefer to talk to someone? Call <a href="tel:9738309248">973-830-9248</a>.</p>
+</div></div></section>
 
 <footer><div class="w"><img src="assets/logo-white.png" alt=""><div>350 Ramapo Valley Rd, Suite 100, Oakland, NJ 07436 &nbsp;·&nbsp; <a href="tel:9738309248">973-830-9248</a>
 <div class="links"><a href="index.html">Home</a><a href="harbor-academy.html">Harbor Academy</a><a href="dir-floortime.html">DIR/Floortime Day Program</a><a href="therapies.html">Individual therapies</a><a href="team.html">Our team</a></div></div></div></footer>
