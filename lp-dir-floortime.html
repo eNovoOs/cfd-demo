@@ -80,8 +80,9 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:10px;font-weight:6
 .price{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
 .price div{border:1px solid var(--mist);border-radius:16px;padding:22px;background:#fff}
 .price b{display:block;font-family:Forum,serif;font-size:36px;color:var(--navy);line-height:1;margin-bottom:8px;font-weight:400}
-.cal{padding:14px;min-height:560px}
-.cal iframe{width:100%;border:0;display:block}
+.cal{padding:14px}
+.cal>div{width:100%}
+.cal iframe{width:100%!important;height:720px!important;border:0;display:block}
 .cal .note a{color:var(--navy);font-weight:700}
 @media(max-width:760px){
 .w{padding:0 20px}
@@ -103,7 +104,8 @@ section{padding:56px 0}
 .pic{height:200px}.founder .pic{height:320px}
 .tq{grid-template-columns:1fr}
 .form{padding:24px}.form .row{grid-template-columns:1fr}
-.cal{padding:10px;min-height:620px}
+.cal{padding:10px}
+.cal iframe{height:820px!important}
 .cards{grid-template-columns:1fr;gap:14px}
 .sticky{display:block}body{padding-bottom:88px}
 .price{grid-template-columns:1fr;gap:12px}

@@ -69,8 +69,9 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:10px;font-weight:6
 .cards>div{padding:26px 22px;border-top:4px solid var(--navy);background:var(--cloud)}
 .cards em{display:block;font-family:Forum,serif;font-style:normal;font-size:40px;color:var(--navy);line-height:1;margin-bottom:12px}
 .tuition .steps{grid-template-columns:1fr 1fr;max-width:640px}.tuition .steps em{color:#fff}
-.cal{padding:14px;min-height:560px}
-.cal iframe{width:100%;border:0;display:block}
+.cal{padding:14px}
+.cal>div{width:100%}
+.cal iframe{width:100%!important;height:720px!important;border:0;display:block}
 .cal .note a{color:var(--navy);font-weight:700}
 @media(max-width:760px){
 .w{padding:0 20px}
@@ -99,7 +100,8 @@ section{padding:56px 0}
 .pic{height:200px}.founder .pic{height:320px}
 .tq{grid-template-columns:1fr}
 .form{padding:24px}.form .row{grid-template-columns:1fr}
-.cal{padding:10px;min-height:620px}
+.cal{padding:10px}
+.cal iframe{height:820px!important}
 .cards{grid-template-columns:1fr;gap:14px}
 footer .w{flex-direction:column;align-items:flex-start;gap:18px}
 }
