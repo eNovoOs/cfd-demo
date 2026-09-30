@@ -35,12 +35,12 @@ Diagnosis in hand. Often has tried ABA or a district placement. Researching alte
 - A full day built around regulation, not compliance.
 - Regulation first. Skills are built on top of that.
 - A therapeutic alternative to a traditional preschool day.
-- Swimming three days a week is part of the therapy, not a break from it.
+- Swimming two days a week is part of the therapy, not a break from it.
 - We build the foundation before expecting higher-level skills.
 - A day programme, not a series of appointments.
 
 ### Support lines
-- Full days, 9:00 to 2:30. Swimming three days a week. 1:1 support. Parent coaching included.
+- Full days, 9:00 to 2:30. Swimming two days a week. 1:1 support. Parent coaching included.
 - Ages 3 to 6, in Oakland, New Jersey.
 - We verify your out-of-network benefits before anything starts.
 - Led by a DIR-Expert practitioner who is also the founder.

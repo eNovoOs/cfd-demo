@@ -1,6 +1,8 @@
 # Brand facts: canonical reference
 
 Source: EduCare Leads onboarding brief 8 Sep 2026, and childfam-dev.com as published 16 Sep 2026.
+Updated 30 Sep 2026 from Courtney's "Edits to new CFD website" document: swimming is 2 days a week,
+not 3, and the DIR/Floortime progression is described as capacities, not steps.
 Where the two disagree, the discrepancy is flagged rather than resolved silently.
 
 ## Identity
@@ -79,7 +81,7 @@ Affiliated swim programme with Five Star Swim School, Oakland NJ.
 
 ### DIR/Floortime Day Program
 Ages 3 to 6, autism diagnosis required. 9:00 to 2:30 Monday to Friday. 12-month programme, open enrolment.
-Includes morning DIR/Floortime play, small-group social engagement, play-based learning, sensory supports throughout the day, swimming 3 days a week, structured transitions, therapeutic integration, parent communication and coaching.
+Includes morning DIR/Floortime play, small-group social engagement, play-based learning, sensory supports throughout the day, swimming 2 days a week, structured transitions, therapeutic integration, parent communication and coaching.
 Progression taught as: Regulation, Connection, Communication, Problem-solving, Flexibility.
 Positioned as "A Therapeutic Alternative to Traditional Preschool or ABA."
 Billing: out-of-network benefits or Medicaid. Benefits verified before enrolment; prior authorisation where the plan requires it.
