@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/harboracademy", "destination": "/harbor-academy", "permanent": true },
+    { "source": "/floortimedayprogram", "destination": "/dir-floortime", "permanent": true },
+    { "source": "/guthealth-feedingtherapy", "destination": "/therapies", "permanent": true },
+    { "source": "/learninghub", "destination": "/learning-hub", "permanent": true },
+    { "source": "/verify-your-benefits", "destination": "/dir-floortime", "permanent": true },
+    { "source": "/pricing-plans/list", "destination": "/harbor-academy", "permanent": true },
+    { "source": "/contact", "destination": "/", "permanent": true },
+    { "source": "/playful-pathways-project", "destination": "/", "permanent": true }
+  ]
+}
