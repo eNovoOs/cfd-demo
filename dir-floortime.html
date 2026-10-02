@@ -84,6 +84,7 @@ nav .btn{margin-top:16px;text-align:center}
 .quotes figure{break-inside:avoid;margin:0 0 22px;background:var(--cloud);border-radius:16px;padding:24px;border-left:3px solid var(--pink)}
 .quotes blockquote{margin:0;font-size:15px;color:var(--ink);line-height:1.62}
 .quotes figcaption{margin-top:14px;font-weight:700;font-size:13px;color:var(--slate)}
+.swipe{display:none}
 @media(max-width:760px){
 .w{padding:0 20px}
 header .w{padding:8px 20px}
@@ -103,7 +104,11 @@ section{padding:56px 0}
 .founder{grid-template-columns:1fr;gap:28px}.founder .ph{height:200px}
 .pic{height:200px}.founder .pic{height:320px}
 .tq{grid-template-columns:1fr}
-.quotes{columns:1}
+.quotes{columns:unset;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:34px -20px 0;padding:0 20px 8px}
+.quotes::-webkit-scrollbar{display:none}
+.quotes figure{flex:0 0 85%;scroll-snap-align:center;margin:0}
+.swipe{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-top:14px}
+.swipe:after{content:" \2192"}
 .form{padding:24px}.form .row{grid-template-columns:1fr}
 .cal{padding:10px}
 .cal iframe{height:820px!important}
@@ -204,6 +209,7 @@ document.addEventListener('click', function (e) {
 
 <section style="padding-top:0"><div class="w">
 <h2>What parents say</h2>
+<p class="swipe">Swipe</p>
 <div class="quotes">
 <figure><blockquote>"I wanted to take a moment to express my heartfelt gratitude for the incredible work you did with our children this summer. Your dedication, patience, and expertise made a significant impact on their growth and development. Your ability to connect with them and make Floortime therapy a joyful experience was truly remarkable."</blockquote><figcaption>Sara R.</figcaption></figure>
 <figure><blockquote>"It's only been a few weeks but I've seen so many changes. More spontaneous language, more connection, and better interactions with his sister."</blockquote><figcaption>Vanessa F.</figcaption></figure>
