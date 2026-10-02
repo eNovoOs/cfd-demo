@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /lp-harbor-academy
+Disallow: /lp-dir-floortime
+Disallow: /lp-harbor-academy-thank-you
+Disallow: /lp-dir-floortime-thank-you
+Disallow: /thank-you
+
+Sitemap: https://childfam-dev.com/sitemap.xml
