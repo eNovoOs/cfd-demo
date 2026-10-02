@@ -118,9 +118,28 @@ footer .w{flex-direction:column;align-items:flex-start;gap:18px}
 // The booking widget redirects here inside its own iframe. Take over the whole
 // window so the parent sees a real page, not a page inside a 720px box.
 (function () {
+  if (window.top === window.self) return;            // not framed, nothing to do
+  var url = window.self.location.href;
+  // 1. Direct top navigation. Works only when no cross-origin frame sits between us.
+  try { window.top.location.replace(url); return; } catch (e) {}
+  // 2. The calendar widget is a cross-origin iframe, so the browser blocks step 1.
+  //    A top-targeted link navigation is allowed where a script property access is not.
   try {
-    if (window.top !== window.self) window.top.location.href = window.self.location.href;
-  } catch (e) { /* if the top window cannot be reached, leave the page as it is */ }
+    var a = document.createElement('a');
+    a.href = url; a.target = '_top'; a.rel = 'noopener';
+    (document.body || document.documentElement).appendChild(a);
+    a.click();
+  } catch (e) {}
+  // 3. Last resort: if we are still inside the frame after a moment, show a button
+  //    the parent can click to break out, rather than leaving them stuck in a box.
+  setTimeout(function () {
+    if (window.top === window.self) return;
+    var bar = document.createElement('a');
+    bar.href = url; bar.target = '_top'; bar.textContent = 'View your confirmation \u2192';
+    bar.style.cssText = 'position:fixed;left:0;right:0;top:0;z-index:99999;display:block;'
+      + 'background:#2B3A7A;color:#fff;text-align:center;padding:16px;font:700 16px Montserrat,sans-serif;text-decoration:none';
+    (document.body || document.documentElement).appendChild(bar);
+  }, 1200);
 })();
 </script>
 <!-- Meta Pixel Code -->
