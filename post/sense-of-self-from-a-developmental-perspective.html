@@ -1,7 +1,12 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Child & Family Development | Pediatric Therapy and Preschool, Oakland NJ</title>
+<title>Sense of Self from a Developmental Perspective | Child &amp; Family Development</title>
+<meta name="description" content="How a child's sense of self develops from infancy through adolescence, and what adults can do at each stage.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+
+
+
 :root{--navy:#2B3A7A;--ink:#1C2340;--slate:#556B8D;--mist:#D5DAE3;--cloud:#F4F6FA;--pink:#E2879B;--green:#96C079;--sun:#EEC72C;--sky:#89BFCA}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Montserrat,sans-serif;color:var(--ink);background:#fff;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
@@ -23,6 +28,7 @@ h3{font-weight:700;font-size:17px;color:var(--navy);margin-bottom:4px}
 .lede{font-size:19px;color:var(--ink);max-width:560px}
 .hero{padding:72px 0 64px;background:var(--cloud)}
 .hero .w{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.hero.plain .lede{max-width:640px}
 .hero h1{margin:18px 0 22px}.hero .cta{display:flex;gap:14px;margin-top:32px}
 .note{font-size:13px;color:var(--slate);margin-top:14px}
 .ph{border-radius:22px;background:repeating-linear-gradient(135deg,#E4E8F0 0 14px,#EDF0F5 14px 28px);border:2px dashed #B8C1D2;height:430px;display:flex;align-items:flex-end;padding:22px;color:var(--slate);font-size:14px;font-weight:600}
@@ -31,7 +37,7 @@ h3{font-weight:700;font-size:17px;color:var(--navy);margin-bottom:4px}
 .facts b{display:block;font-size:22px;color:var(--navy);font-weight:700}.facts span{font-size:14px;color:var(--slate)}
 section{padding:84px 0}
 .split{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
-.day{list-style:none;border-left:3px solid var(--pink);padding-left:30px}
+.day{list-style:none;border-left:3px solid var(--mist);padding-left:30px}
 .day li{position:relative;padding:0 0 26px}
 .day li:before{content:"";position:absolute;left:-39px;top:6px;width:15px;height:15px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
 .day p,.sm{font-size:15px;color:var(--slate)}
@@ -69,11 +75,27 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:10px;font-weight:6
 .cards{display:grid;gap:22px;margin-top:36px}.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:repeat(3,1fr)}
 .cards>div{padding:26px 22px;border-top:4px solid var(--navy);background:var(--cloud)}
 .cards em{display:block;font-family:Forum,serif;font-style:normal;font-size:40px;color:var(--navy);line-height:1;margin-bottom:12px}
-.hero.short{padding:56px 0 48px}.hero.short .ph{height:340px}
-.pc{display:flex;flex-direction:column}.pc .eb{margin-bottom:14px}.pc h3{font-size:22px;margin-bottom:8px}.pc p{flex:1}.pc .btn{align-self:flex-start;margin-top:22px}
-.pc.g{border-top-color:var(--green)}.pc.p{border-top-color:var(--pink)}.pc.s{border-top-color:var(--sky)}
-.pc.g .eb i{background:var(--green)}.pc.p .eb i{background:var(--pink)}.pc.s .eb i{background:var(--sky)}
-.why h3{margin-top:22px}.why h3:first-child{margin-top:0}
+.thrive{border-left:3px solid var(--mist);padding-left:14px;font-size:15px;color:var(--ink)}
+.founder .bio{font-size:16px;color:var(--slate);margin-top:14px}
+.posts{display:grid;gap:0;margin-top:10px}
+.posts a{display:block;text-decoration:none;color:inherit;border-top:1px solid var(--mist);padding:30px 0}
+.posts a:last-child{border-bottom:1px solid var(--mist)}
+.posts h3{font-size:23px;line-height:1.25;margin-bottom:8px}
+.posts p{font-size:16px;color:var(--slate);max-width:720px}
+.posts .meta{font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:10px}
+.posts a:hover h3{text-decoration:underline}
+.post{max-width:680px}
+.post .meta{font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:16px}
+.post h1{font-size:42px;margin-bottom:26px}
+.post h2{font-size:25px;margin:40px 0 12px}
+.post h3{font-size:18px;margin:28px 0 6px}
+.post p{margin-bottom:16px}
+.post ul{margin:0 0 20px 20px}.post li{margin-bottom:7px}
+.post .lead{font-size:20px;color:var(--ink);margin-bottom:26px}
+.post blockquote{border-left:3px solid var(--pink);padding-left:22px;margin:26px 0;font-size:19px;color:var(--navy)}
+.post .refs{font-size:14px;color:var(--slate);margin-top:14px}
+.post .refs li{margin-bottom:6px}
+.back{display:inline-block;margin-top:40px;font-weight:700;color:var(--navy);text-decoration:none;font-size:15px}
 @media(max-width:1080px){
 header .w{height:auto;flex-wrap:wrap;padding:14px 40px}
 .mb{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;border:1.5px solid var(--mist);border-radius:12px;cursor:pointer}
@@ -90,7 +112,7 @@ header .w{padding:8px 20px}
 h1{font-size:36px}h2{font-size:28px}.lede{font-size:17px}.quote{font-size:30px}
 .hero{padding:36px 0 36px}.hero .w{grid-template-columns:1fr;gap:28px}
 .hero .cta{flex-direction:column;align-items:stretch}.hero .cta .btn{text-align:center}
-.ph{height:200px}.hero.short .ph{height:200px}
+.ph{height:200px}
 .facts{grid-template-columns:1fr 1fr}
 .facts div{padding:18px 16px;border-right:0;border-bottom:1px solid var(--mist)}
 .facts div:nth-child(odd){border-right:1px solid var(--mist)}
@@ -101,13 +123,18 @@ section{padding:56px 0}
 .ladder{grid-template-columns:1fr;gap:12px}.ladder div:nth-child(n){margin-top:0}
 .steps{grid-template-columns:1fr;gap:14px}
 .founder{grid-template-columns:1fr;gap:28px}.founder .ph{height:200px}
-.pic{height:200px}.founder .pic{height:320px}
+.pic{height:200px}.founder .pic{aspect-ratio:4/5;height:auto;max-width:300px}
 .tq{grid-template-columns:1fr}
 .form{padding:24px}.form .row{grid-template-columns:1fr}
 .cards{grid-template-columns:1fr;gap:14px}
+.post h1{font-size:31px}
+.post h2{font-size:22px}
+.posts h3{font-size:20px}
+.post .lead{font-size:18px}
 footer .w{flex-direction:column;align-items:flex-start;gap:18px}
 }
-</style><script type="text/javascript">
+</style>
+<script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -143,48 +170,94 @@ document.addEventListener('click', function (e) {
 </script>
 </head><body>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1161526882203012&ev=PageView&noscript=1" alt=""></noscript>
-
-<header><div class="w"><a href="index.html"><img src="assets/logo-color.png" alt="Child & Family Development"></a>
+<header><div class="w"><a href="../index.html"><img src="../assets/logo-color.png" alt="Child & Family Development"></a>
 <input type="checkbox" id="menu" class="mt"><label for="menu" class="mb" aria-label="Menu"><i></i><i></i><i></i></label>
-<nav><a href="index.html">Home</a><a href="harbor-academy.html">Harbor Academy</a><a href="dir-floortime.html">DIR/Floortime</a><a href="therapies.html">Therapies</a><a href="team.html">Team</a><a href="learning-hub.html">Learning Hub</a><a class="btn navy" href="#book">Book a free consultation</a></nav></div></header>
+<nav><a href="../index.html">Home</a><a href="../harbor-academy.html">Harbor Academy</a><a href="../dir-floortime.html">DIR/Floortime</a><a href="../therapies.html">Therapies</a><a href="../team.html">Team</a><a href="../learning-hub.html">Learning Hub</a><a class="btn navy" href="../index.html#book">Book a free consultation</a></nav></div></header>
+<section><div class="w"><article class="post">
+<div class="meta">January 2, 2026 &nbsp;·&nbsp; 6 min read</div>
+<h1>Sense of Self from a Developmental Perspective</h1>
+<p class="lead">A child's sense of self is their emerging understanding of themselves as a distinct and continuous individual, separate from others, with their own thoughts, feelings, actions and identity.</p>
+<p>This foundational capacity begins in infancy and becomes more complex through ongoing interactions with caregivers and the environment.</p>
 
-<div class="hero short"><div class="w"><div>
-<div class="eb"><i></i>Child &amp; Family Development &nbsp;·&nbsp; Oakland, NJ</div>
-<h1>Change starts here.</h1>
-<p class="lede">A pediatric therapy practice in Oakland, New Jersey, that also runs a small preschool. Three programs, one relationship-based approach. Start with the one built for your family.</p>
-<div class="cta"><a class="btn navy" href="#book">Find the right program</a></div>
-</div><div class="pic"><img src="assets/photos/pet-store.jpg" alt="Children and an educator at the aquarium during a community outing" width="800" height="875" fetchpriority="high"></div></div></div>
+<h2>Infancy, 0 to 18 months</h2>
+<p>Early signs of self-awareness appear through sensory and motor experiences. Responsive caregiving helps infants differentiate themselves from others, laying the groundwork for a core sense of being.</p>
+<h3>Focus: feeling safe, secure and seen</h3>
+<ul>
+<li>Respond consistently to cries and cues, which shows the baby their needs matter.</li>
+<li>Engage in face-to-face play: peek-a-boo, mirroring expressions.</li>
+<li>Use warm, affectionate touch and tone to build trust.</li>
+<li>Narrate simple daily routines: "Now we're putting on your socks."</li>
+<li>Follow the baby's lead in play, even if it is just banging a spoon.</li>
+</ul>
 
-<section id="book"><div class="w">
-<h2>Start with the program<br>built for your family.</h2>
-<p class="sm" style="max-width:640px">Each one has its own page, with what a day looks like, how it is billed, and how to book a free consultation.</p>
-<div class="cards c3">
-<div class="pc g"><div class="eb"><i></i>Preschool &nbsp;·&nbsp; Ages 3 to 6</div><h3>Harbor Academy</h3><p class="sm">More support. Still preschool. A small, play-based classroom founded by an occupational therapist, for the child who needs more than a big room can give. No diagnosis needed. Private pay, so there is no insurance approval to wait on.</p><a class="btn navy" href="harbor-academy.html">See Harbor Academy</a></div>
-<div class="pc p"><div class="eb"><i></i>Day program &nbsp;·&nbsp; Ages 3 to 6</div><h3>DIR/Floortime Day Program</h3><p class="sm">Connection before compliance. A full, relationship-based day for children with an autism diagnosis, as a therapeutic alternative to a traditional preschool or ABA program. Out-of-network benefits or Medicaid, verified before anything starts.</p><a class="btn navy" href="dir-floortime.html">See the day program</a></div>
-<div class="pc s"><div class="eb"><i></i>Therapy &nbsp;·&nbsp; Birth to 21</div><h3>Individual therapies</h3><p class="sm">Occupational, feeding, aquatic and DIR/Floortime sessions for any diagnosis, plus two-week and one-month intensives for families traveling in, and remote parent training. Out of network.</p><a class="btn navy" href="therapies.html">See individual therapies</a></div></div></div></section>
+<h2>Toddlerhood, 18 to 36 months</h2>
+<p>Self-recognition, for example in a mirror, and use of personal pronouns such as "me" and "mine" indicate a growing awareness of self. Children begin asserting independence, which supports autonomy and identity development.</p>
+<h3>Focus: exploring independence within safe relationships</h3>
+<ul>
+<li>Offer choices: "Do you want the red cup or the blue cup?"</li>
+<li>Validate big feelings: "I see you're frustrated. It's okay to feel mad."</li>
+<li>Encourage movement play for body awareness.</li>
+<li>Support emerging words: label their feelings and interests.</li>
+<li>Provide safe opportunities to try, and sometimes fail, with gentle encouragement.</li>
+</ul>
 
-<section class="final"><div class="w split"><div>
-<h2>What is different here</h2>
-<p class="sm">The same approach runs through the preschool, the day program and every single session.</p></div>
-<div class="why">
-<h3>Regulation first</h3><p class="sm">Feeling calm and safe comes before every skill. That order does not change, whichever room a child is in.</p>
-<h3>Relationship-based, by design</h3><p class="sm">DIR/Floortime is a developmental approach that follows the child's interests. Adults join the play, and communication grows from that connection.</p>
-<h3>Founder-led, on the floor</h3><p class="sm">Courtney St. Germain, OTR/L and DIR-Expert practitioner, founded the practice and works on the floor with the team.</p>
-<h3>Plain about billing</h3><p class="sm">No in-network contracts. We verify your out-of-network benefits before anything starts, and Harbor Academy is private pay with no approval to wait on.</p>
-</div></div></section>
+<h2>Preschool years, 3 to 5</h2>
+<p>Children engage in symbolic play and begin forming a narrative about who they are: "I'm good at drawing", "I'm shy". Emotional experiences become more integrated into self-understanding.</p>
+<h3>Focus: building identity through play and imagination</h3>
+<ul>
+<li>Encourage pretend play and let them take the lead in make-believe.</li>
+<li>Acknowledge effort, not just outcome: "You worked so hard on that tower."</li>
+<li>Support turn-taking and negotiation in playdates.</li>
+<li>Help name and sort feelings: "You were sad when the tower fell, and then you tried again."</li>
+<li>Foster creativity through art, music, and dress-up.</li>
+</ul>
 
-<section><div class="w founder"><div class="pic"><img src="assets/photos/courtney.jpg" alt="Courtney St. Germain, OTR/L, founder and Clinical Director" loading="lazy" width="720" height="810"></div><div>
-<p class="quote">Children learn best when they feel safe, connected and understood.</p>
-<h3 style="margin-top:26px">Courtney St. Germain, OTR/L, DIR-Expert Practitioner</h3>
-<p class="sm">Founder and Clinical Director. Courtney founded the practice and Harbor Academy, designed the day program, and works on the floor alongside occupational therapy staff and DIR/Floortime assistants.</p></div></div></section>
+<h2>School age, 6 to 12</h2>
+<p>Social comparison and feedback from peers and adults help children form a more stable self-concept, including moral reasoning and self-evaluation.</p>
+<h3>Focus: confidence, competence and social belonging</h3>
+<ul>
+<li>Encourage responsibility through chores and helping with cooking.</li>
+<li>Support problem-solving: "What's another way we could try that puzzle?"</li>
+<li>Celebrate strengths while normalizing challenges.</li>
+<li>Foster friendships through playdates, group activities, or clubs.</li>
+<li>Talk openly about differences and strengths, modeling acceptance.</li>
+<li>Encourage journaling, drawing, or storytelling for self-expression.</li>
+</ul>
 
-<div class="w" style="margin-bottom:84px"><div class="facts">
-<div><b>Oakland, NJ</b><span>Fairfield location coming soon</span></div>
-<div><b>OTR/L, DIR-Expert</b><span>Founder-led practice</span></div>
-<div><b>Birth to 21</b><span>Individual therapies, any diagnosis</span></div>
-<div><b>Out of network</b><span>Benefits verified before anything starts</span></div></div></div>
+<h2>Adolescence, 12 and up</h2>
+<p>Abstract thinking allows for exploration of identity, values, and beliefs. Teens develop a more cohesive and internalized sense of self, including future goals and social roles.</p>
+<h3>Focus: identity, autonomy and resilience</h3>
+<ul>
+<li>Give space for independent decision-making, while offering guidance.</li>
+<li>Encourage reflection: "What do you think about that situation?"</li>
+<li>Validate growing emotions and struggles. Listen more than you talk.</li>
+<li>Support hobbies and passions that connect to their sense of identity.</li>
+<li>Reinforce self-advocacy: practicing how to express needs respectfully.</li>
+<li>Maintain family rituals to balance independence with belonging.</li>
+</ul>
 
+<h2>From a DIR/Floortime perspective</h2>
+<p>In the DIR/Floortime model, a strong sense of self is built through co-regulated emotional interactions, especially within the first four Functional Emotional Developmental Capacities. Children come to know who they are through relationships that support emotional expression, shared problem-solving, and intentionality.</p>
+<blockquote>At every stage, nurturing a sense of self means seeing the child for who they are, honoring their emotions, and supporting their growth with warmth and connection.</blockquote>
+<h2>References</h2>
+<ul class="refs">
+<li>Greenspan, S. I., &amp; Wieder, S. (2006). <i>Engaging Autism.</i> Da Capo Press.</li>
+<li>Mahler, M. S., Pine, F., &amp; Bergman, A. (1975). <i>The Psychological Birth of the Human Infant.</i> Basic Books.</li>
+<li>Stern, D. N. (1985). <i>The Interpersonal World of the Infant.</i> Basic Books.</li>
+<li>Erikson, E. H. (1950). <i>Childhood and Society.</i> W. W. Norton &amp; Company.</li>
+<li>Calkins, S. D., &amp; Leerkes, E. M. (2011). Early attachment processes and the development of emotional self-regulation. In <i>Handbook of Self-Regulation</i> (2nd ed.).</li>
+</ul>
+<a class="back" href="../learning-hub.html">Back to the Learning Hub</a>
+</article></div></section>
 
-<footer><div class="w"><img src="assets/logo-white.png" alt=""><div>350 Ramapo Valley Rd, Suite 100, Oakland, NJ 07436 &nbsp;·&nbsp; <a href="tel:9738309248">973-830-9248</a>
-<div class="links"><a href="index.html">Home</a><a href="harbor-academy.html">Harbor Academy</a><a href="dir-floortime.html">DIR/Floortime Day Program</a><a href="therapies.html">Individual therapies</a><a href="team.html">Our team</a><a href="learning-hub.html">Learning Hub</a><a href="https://childfam-dev.janeapp.com/login" target="_blank" rel="noopener" data-fb-event="PortalLogin">Client portal</a></div></div></div></footer>
+<section class="final" style="padding:60px 0"><div class="w"><h2>Keep reading</h2>
+<div class="posts" style="margin-top:0"><a href="what-is-dir-floortime-understanding-the-therapy-beyond-the-misconceptions.html">
+<div class="meta">June 24, 2026 &nbsp;·&nbsp; 4 min read</div>
+<h3>DIR/Floortime: What It Is, What It Isn't, and Why It Matters</h3></a><a href="the-hidden-cost-of-teaching-compliance.html">
+<div class="meta">June 14, 2026 &nbsp;·&nbsp; 5 min read</div>
+<h3>The Hidden Cost of Teaching Compliance</h3></a></div>
+<div class="cta" style="margin-top:34px"><a class="btn navy" href="../index.html#book">Book a free consultation</a></div></div></section>
+
+<footer><div class="w"><img src="../assets/logo-white.png" alt=""><div>350 Ramapo Valley Rd, Suite 100, Oakland, NJ 07436 &nbsp;·&nbsp; <a href="tel:9738309248">973-830-9248</a>
+<div class="links"><a href="../index.html">Home</a><a href="../harbor-academy.html">Harbor Academy</a><a href="../dir-floortime.html">DIR/Floortime Day Program</a><a href="../therapies.html">Individual therapies</a><a href="../team.html">Our team</a><a href="../learning-hub.html">Learning Hub</a><a href="https://childfam-dev.janeapp.com/login" target="_blank" rel="noopener" data-fb-event="PortalLogin">Client portal</a></div></div></div></footer>
 </body></html>

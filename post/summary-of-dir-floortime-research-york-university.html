@@ -6,6 +6,7 @@
 <style>
 
 
+
 :root{--navy:#2B3A7A;--ink:#1C2340;--slate:#556B8D;--mist:#D5DAE3;--cloud:#F4F6FA;--pink:#E2879B;--green:#96C079;--sun:#EEC72C;--sky:#89BFCA}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Montserrat,sans-serif;color:var(--ink);background:#fff;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
@@ -27,7 +28,7 @@ h3{font-weight:700;font-size:17px;color:var(--navy);margin-bottom:4px}
 .lede{font-size:19px;color:var(--ink);max-width:560px}
 .hero{padding:72px 0 64px;background:var(--cloud)}
 .hero .w{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
-.hero.plain .w{grid-template-columns:1fr}.hero.plain .lede{max-width:640px}
+.hero.plain .lede{max-width:640px}
 .hero h1{margin:18px 0 22px}.hero .cta{display:flex;gap:14px;margin-top:32px}
 .note{font-size:13px;color:var(--slate);margin-top:14px}
 .ph{border-radius:22px;background:repeating-linear-gradient(135deg,#E4E8F0 0 14px,#EDF0F5 14px 28px);border:2px dashed #B8C1D2;height:430px;display:flex;align-items:flex-end;padding:22px;color:var(--slate);font-size:14px;font-weight:600}
@@ -156,7 +157,7 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel Code -->
 <script>
 document.addEventListener('click', function (e) {
-  var b = e.target.closest('.btn, button');
+  var b = e.target.closest('.btn, button, [data-fb-event]');
   if (!b || typeof fbq !== 'function') return;
   // A button can name its own event. Links that sit outside the booking
   // funnel, such as the client portal, must not land in ViewContent.
@@ -210,5 +211,5 @@ document.addEventListener('click', function (e) {
 <div class="cta" style="margin-top:34px"><a class="btn navy" href="../index.html#book">Book a free consultation</a></div></div></section>
 
 <footer><div class="w"><img src="../assets/logo-white.png" alt=""><div>350 Ramapo Valley Rd, Suite 100, Oakland, NJ 07436 &nbsp;·&nbsp; <a href="tel:9738309248">973-830-9248</a>
-<div class="links"><a href="../index.html">Home</a><a href="../harbor-academy.html">Harbor Academy</a><a href="../dir-floortime.html">DIR/Floortime Day Program</a><a href="../therapies.html">Individual therapies</a><a href="../team.html">Our team</a><a href="../learning-hub.html">Learning Hub</a></div></div></div></footer>
+<div class="links"><a href="../index.html">Home</a><a href="../harbor-academy.html">Harbor Academy</a><a href="../dir-floortime.html">DIR/Floortime Day Program</a><a href="../therapies.html">Individual therapies</a><a href="../team.html">Our team</a><a href="../learning-hub.html">Learning Hub</a><a href="https://childfam-dev.janeapp.com/login" target="_blank" rel="noopener" data-fb-event="PortalLogin">Client portal</a></div></div></div></footer>
 </body></html>

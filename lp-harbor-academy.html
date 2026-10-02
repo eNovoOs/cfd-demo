@@ -138,7 +138,7 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel Code -->
 <script>
 document.addEventListener('click', function (e) {
-  var b = e.target.closest('.btn, button');
+  var b = e.target.closest('.btn, button, [data-fb-event]');
   if (!b || typeof fbq !== 'function') return;
   // A button can name its own event. Links that sit outside the booking
   // funnel, such as the client portal, must not land in ViewContent.
