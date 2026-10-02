@@ -128,6 +128,9 @@ fbq('track', 'PageView');
 document.addEventListener('click', function (e) {
   var b = e.target.closest('.btn, button');
   if (!b || typeof fbq !== 'function') return;
+  // A button can name its own event. Links that sit outside the booking
+  // funnel, such as the client portal, must not land in ViewContent.
+  if (b.dataset.fbEvent) { fbq('trackCustom', b.dataset.fbEvent); return; }
   fbq('track', 'ViewContent', {
     content_name: (b.textContent || '').trim().slice(0, 80),
     content_category: document.title.split('|')[0].trim()
