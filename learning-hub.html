@@ -95,6 +95,7 @@ footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:10px;font-weight:6
 .thrive{border-left:3px solid var(--mist);padding-left:14px;font-size:15px;color:var(--ink)}
 .founder .bio{font-size:16px;color:var(--slate);margin-top:14px}
 .posts{display:grid;gap:0;margin-top:10px}
+.courses{grid-template-columns:1fr}
 .posts a{display:block;text-decoration:none;color:inherit;border-top:1px solid var(--mist);padding:30px 0}
 .posts a:last-child{border-bottom:1px solid var(--mist)}
 .posts h3{font-size:23px;line-height:1.25;margin-bottom:8px}
@@ -123,6 +124,13 @@ nav a:not(.btn){padding:13px 0;border-bottom:1px solid var(--mist)}
 nav .btn{margin-top:16px;text-align:center}
 .mt:checked~nav{display:flex}
 }
+.courses{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:10px}
+.courses a{display:block;text-decoration:none;color:inherit;border:1px solid var(--mist);border-radius:16px;padding:26px;background:#fff}
+.courses a:hover{border-color:var(--navy)}
+.courses h3{font-size:19px;line-height:1.3;margin-bottom:8px;color:var(--navy)}
+.courses .go{font-weight:700;font-size:14px;color:var(--navy)}
+.courses .go:after{content:" \2192"}
+.tagfree{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#2B3A7A;background:#EEF1F8;border-radius:999px;padding:4px 10px;margin-bottom:10px}
 @media(max-width:760px){
 .w{padding:0 20px}
 header .w{padding:8px 20px}
@@ -196,7 +204,17 @@ document.addEventListener('click', function (e) {
 <p class="lede">Whether you are a parent, therapist, teacher or caregiver, you play a part in a child's development. These are the things we find ourselves explaining most often.</p>
 </div></div></div>
 
-<section><div class="w"><div class="posts">
+<section><div class="w">
+<h2>Courses</h2>
+<p class="sm" style="max-width:640px">On-demand courses for parents and professionals, taught by our team.</p>
+<div class="courses">
+<a href="https://learninghub.childfam-dev.com/ParentCoachingSeries" target="_blank" rel="noopener"><h3>Parent Coaching Series</h3><p class="go">Learn more</p></a>
+<a href="https://learninghub.childfam-dev.com/MeltdownstoRegulation" target="_blank" rel="noopener"><h3>From Meltdowns to Regulation</h3><p class="go">Learn more</p></a>
+<a href="https://learninghub.childfam-dev.com/CFD-Clinical-Fellowship" target="_blank" rel="noopener"><h3>CFD Fellowship and Mentoring Program</h3><p class="go">Learn more</p></a>
+<a href="https://learninghub.childfam-dev.com/HiddenPowerofSymbolicPlay" target="_blank" rel="noopener"><span class="tagfree">Free</span><h3>The Hidden Power of Symbolic Play</h3><p class="go">Watch free</p></a>
+</div></div></section>
+
+<section style="padding-top:0"><div class="w"><h2>Articles</h2><div class="posts">
 <a href="post/what-is-dir-floortime-understanding-the-therapy-beyond-the-misconceptions.html">
 <div class="meta">June 24, 2026 &nbsp;·&nbsp; 4 min read</div>
 <h3>DIR/Floortime: What It Is, What It Isn't, and Why It Matters</h3>
