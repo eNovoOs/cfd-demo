@@ -6,5 +6,6 @@ Disallow: /lp-harbor-academy-thank-you
 Disallow: /lp-dir-floortime-thank-you
 Disallow: /thank-you
 Disallow: /check-your-benefits
+Disallow: /book
 
 Sitemap: https://childfam-dev.com/sitemap.xml
