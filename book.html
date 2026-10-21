@@ -94,18 +94,14 @@ fbq('track', 'PageView');
 </div></div>
 
 <section><div class="w layout">
-<div class="calcard">
-<!-- Unified booking calendar, hosted by the practice CRM (osenovo). On completion it
-     redirects to /thank-you, which breaks out of this iframe and fires the Lead event. -->
-<script type="text/javascript" src="https://platform.osenovo.com/assets/scripts/prospectconnect-integrate-widgets.js"></script>
-<script>
-  var currentScriptElement = document.currentScript;
-  createCalendar({
-    calendarId: "6ad63c6e4557ec7965abefa3",
-    callingElement: currentScriptElement,
-  });
-</script>
-<noscript><p class="sm">This calendar needs JavaScript. Please call us at <a href="tel:9738309248">973-830-9248</a> and we will book a time with you.</p></noscript>
+<div class="calcard" style="text-align:center;padding:40px 28px">
+<!-- The calendar is linked, not embedded. Embedding it as a cross-site iframe fails in
+     Safari (Prevent Cross-Site Tracking) and under ad/privacy blockers, leaving a blank
+     box. Linking to the hosted calendar page loads it as a first-party context, which
+     works in every browser. It redirects to /thank-you on completion, firing the Lead. -->
+<p class="sm" style="margin-bottom:20px">Choose a day and time on the next screen. It takes about a minute, and there is nothing to pay.</p>
+<a class="btn navy" href="https://calendar.prospectconnect.ai/calendar/6ad63c6e4557ec7965abefa3" style="display:inline-block;font-size:17px;padding:17px 38px">Pick a time &rarr;</a>
+<p class="sm" style="margin-top:18px">Prefer to talk first? Call <a href="tel:9738309248" style="color:var(--navy);font-weight:700;text-decoration:none">973-830-9248</a>.</p>
 </div>
 
 <aside class="side">

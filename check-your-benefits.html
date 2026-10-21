@@ -91,17 +91,15 @@ footer .w{flex-direction:column;align-items:flex-start;gap:18px}
 </div></div>
 
 <section id="form"><div class="w layout">
-<div class="formcard">
-<!-- Verification of Benefits form, hosted by the practice CRM (osenovo). Embedded as a
-     direct iframe rather than the osenovo widget script, because ad/privacy blockers
-     often block the external widget script and leave the form blank (seen on desktop
-     Chrome with an extension). The direct iframe has one less thing to block.
-     This page carries no Microsoft Clarity and no Meta Pixel on purpose: the form
-     collects protected health information, so nothing here may reach a recording or
-     ad platform. -->
-<iframe src="https://form.prospectconnect.ai/form/6ac41b9463274b605623e021" title="Benefits Verification Form" loading="lazy"></iframe>
-<noscript><p class="os-note">This form needs JavaScript. Please call us at <a href="tel:9738309248">973-830-9248</a> and we will take your details by phone.</p></noscript>
-<p class="os-note" style="margin-top:18px;text-align:center;border-top:1px solid var(--mist);padding-top:16px">Form not loading? <a href="https://form.prospectconnect.ai/form/6ac41b9463274b605623e021" target="_blank" rel="noopener" style="color:var(--navy);font-weight:700;text-decoration:none">Open it in a new tab</a> or call <a href="tel:9738309248" style="color:var(--navy);font-weight:700;text-decoration:none">973-830-9248</a> and we will take your details by phone.</p>
+<div class="formcard" style="text-align:center;padding:40px 28px">
+<!-- The form is linked, not embedded. Embedding it as a cross-site iframe fails in Safari
+     (Prevent Cross-Site Tracking) and under ad/privacy blockers, leaving a blank box.
+     Linking to the hosted form page loads it as a first-party context, which works in
+     every browser. This page still carries no Clarity and no Meta Pixel on purpose: the
+     form collects protected health information. -->
+<p class="os-note" style="margin-bottom:20px">It takes a couple of minutes. Your details go straight to our team and are kept private.</p>
+<a class="btn navy" href="https://form.prospectconnect.ai/form/6ac41b9463274b605623e021" style="display:inline-block;font-size:17px;padding:17px 38px;border-radius:999px;font-weight:700;text-decoration:none">Start your benefits check &rarr;</a>
+<p class="os-note" style="margin-top:18px">Prefer to do it by phone? Call <a href="tel:9738309248" style="color:var(--navy);font-weight:700;text-decoration:none">973-830-9248</a>.</p>
 </div>
 
 <aside class="side">
