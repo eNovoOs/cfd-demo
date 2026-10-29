@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>You Are Booked | Child & Family Development, Oakland NJ</title>
 <meta name="robots" content="noindex">
-<meta name="description" content="Your consultation is booked.">
+<meta name="description" content="Check your email for the details.">
 <link rel="canonical" href="https://childfam-dev.com/thank-you">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png">
@@ -11,12 +11,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Child & Family Development">
 <meta property="og:title" content="You Are Booked | Child & Family Development, Oakland NJ">
-<meta property="og:description" content="Your consultation is booked.">
+<meta property="og:description" content="Check your email for the details.">
 <meta property="og:url" content="https://childfam-dev.com/thank-you">
 <meta property="og:image" content="https://childfam-dev.com/assets/og-card.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="You Are Booked | Child & Family Development, Oakland NJ">
-<meta name="twitter:description" content="Your consultation is booked.">
+<meta name="twitter:description" content="Check your email for the details.">
 <meta name="twitter:image" content="https://childfam-dev.com/assets/og-card.jpg">
 
 <link href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -184,14 +184,21 @@ document.addEventListener('click', function (e) {
 }, true);
 </script>
 <script>
-// Booking confirmation step. Guarded so a page refresh does not count a second lead.
+// Booking confirmation step.
+// osenovo redirects booking, reschedule AND cancel to this one URL, with no query
+// parameter to tell them apart, and a cross-origin referrer carries only the origin.
+// So this page cannot know which of the three just happened. localStorage keeps the
+// same browser from counting a later cancellation as a second Lead, which covers
+// most of it. The real fix is to fire Lead from the workflow through the Conversions
+// API on "Appointment booked", where a cancellation can never trigger it. Until then
+// the headline stays true for all three outcomes.
 (function () {
   // Inside the widget iframe the frame-buster is already taking over the window.
   // Firing here would set the guard and silence the real Lead a moment later.
   if (window.top !== window.self) return;
   try {
-    if (sessionStorage.getItem('cfd_lead') === '1') return;
-    sessionStorage.setItem('cfd_lead', '1');
+    if (localStorage.getItem('cfd_lead') === '1') return;
+    localStorage.setItem('cfd_lead', '1');
   } catch (err) { /* private mode: fall through and still fire once per load */ }
   if (typeof fbq === 'function') fbq('track', 'Lead');
 })();
@@ -202,15 +209,15 @@ document.addEventListener('click', function (e) {
 <header><div class="w"><a href="index.html"><img src="assets/logo-color.png" alt="Child & Family Development"></a></div></header>
 
 <div class="hero plain" id="book"><div class="w"><div>
-<div class="eb"><i></i>Consultation booked</div>
-<h1>Thank you.<br>Your consultation is booked.</h1>
-<p class="lede">We email you the booking details and remind you before your visit. Nothing else is needed from you right now.</p>
+<div class="eb"><i></i>Check your email</div>
+<h1>Thank you.<br>Check your email.</h1>
+<p class="lede">We just sent you the details. Nothing else is needed from you right now.</p>
 </div></div></div>
 
 <section><div class="w">
-<h2>What happens next</h2>
+<h2>If you booked a visit</h2>
 <div class="cards c3">
-<div><em>1</em><h3>A confirmation by email</h3><p class="sm">Your booking details, the address, and a reminder before your visit.</p></div>
+<div><em>1</em><h3>An email from us</h3><p class="sm">The details of your visit, the address, and a reminder before you come.</p></div>
 <div><em>2</em><h3>Your visit</h3><p class="sm">A free consultation and a tour of the room. Come with your questions.</p></div>
 <div><em>3</em><h3>Next steps, together</h3><p class="sm">If it looks like a fit, we talk through the program and, for the day program and individual therapies, verify your out-of-network benefits before anything starts.</p></div></div></div></section>
 
