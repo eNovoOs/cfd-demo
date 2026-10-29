@@ -90,18 +90,23 @@ fbq('track', 'PageView');
 <div class="hero"><div class="w">
 <div class="eb"><i></i>Free consultation or tour</div>
 <h1>Book a visit.</h1>
-<p class="lede">Choose a free consultation by phone or video, or an in person tour of our space. We get to know your child and answer your questions. There is no cost and no obligation.</p>
+<p class="lede">A free consultation by phone or video, or an in person tour of our space. Pick whichever suits your family. We get to know your child and answer your questions. There is no cost and no obligation.</p>
 </div></div>
 
 <section><div class="w layout">
 <div class="calcard" style="text-align:center;padding:40px 28px">
-<!-- The calendar is linked, not embedded. Embedding it as a cross-site iframe fails in
-     Safari (Prevent Cross-Site Tracking) and under ad/privacy blockers, leaving a blank
-     box. Linking to the hosted calendar page loads it as a first-party context, which
-     works in every browser. It redirects to /thank-you on completion, firing the Lead. -->
-<p class="sm" style="margin-bottom:20px">Choose a consultation or a tour on the next screen, then pick a day and time. It takes about a minute, and there is nothing to pay.</p>
-<a class="btn navy" href="https://calendar.prospectconnect.ai/calendar/6ae0e42012fc54b9021b63d9/service" style="display:inline-block;font-size:17px;padding:17px 38px">Pick a time &rarr;</a>
-<p class="sm" style="margin-top:18px">Prefer to talk first? Call <a href="tel:9738309248" style="color:var(--navy);font-weight:700;text-decoration:none">973-830-9248</a>.</p>
+<!-- Two links, not one menu, and not an embed.
+     Embedding fails in Safari (Prevent Cross-Site Tracking) and under ad blockers.
+     The osenovo Service Menu, which combined both options behind one link, is gone:
+     it only accepts "Service Booking" calendars, and that calendar type silently
+     never sends the booking confirmation email. Tested across two owner users. The
+     "One-On-One" type sends correctly, so both calendars are that type and each gets
+     its own link. Both redirect to /thank-you on completion, firing the Lead. -->
+<p class="sm" style="margin-bottom:8px"><strong style="color:var(--navy)">A free consultation</strong><br>30 minutes, by phone or video.</p>
+<a class="btn navy" href="https://calendar.prospectconnect.ai/calendar/6ae2af8bf61274526d727446" style="display:inline-block;font-size:17px;padding:16px 34px">Book a consultation &rarr;</a>
+<p class="sm" style="margin:28px 0 8px"><strong style="color:var(--navy)">A tour of our space</strong><br>60 minutes, in person in Oakland. Your child is welcome to come along.</p>
+<a class="btn" href="https://calendar.prospectconnect.ai/calendar/6ae2b20ff61274526d727958" style="display:inline-block;font-size:17px;padding:14px 32px;background:#fff;color:var(--navy);border:2px solid var(--navy)">Book a tour &rarr;</a>
+<p class="sm" style="margin-top:26px">Prefer to talk first? Call <a href="tel:9738309248" style="color:var(--navy);font-weight:700;text-decoration:none">973-830-9248</a>.</p>
 </div>
 
 <aside class="side">
@@ -111,7 +116,7 @@ fbq('track', 'PageView');
 <li>Time to ask your questions and share your concerns</li>
 <li>If it looks like a fit, we talk through the next steps together</li>
 </ul>
-<p class="sm" style="margin-top:14px">For our programs and individual therapies, we verify your out-of-network benefits before anything starts.</p>
+<p class="sm" style="margin-top:14px">If you are exploring our full day program, we verify your out-of-network benefits before anything starts. Our other services are private pay.</p>
 <div class="vis">
 <h3 style="margin-top:22px">Where to find us</h3>
 <p>350 Ramapo Valley Rd, Suite 100<br>Oakland, NJ 07436</p>
@@ -125,8 +130,10 @@ fbq('track', 'PageView');
 
 <script>
 // Reaching the booking page is a strong intent signal. Fire ViewContent on load,
-// and on any button click, with static labels only (no field values).
-if (typeof fbq === 'function') fbq('track', 'ViewContent', {content_name: 'Book a consultation', content_category: 'Booking'});
+// and on any button click, with static labels only (no field values). The click
+// label now separates the consultation from the tour, so Meta can tell which of
+// the two a visitor chose.
+if (typeof fbq === 'function') fbq('track', 'ViewContent', {content_name: 'Book a visit', content_category: 'Booking'});
 document.addEventListener('click', function (e) {
   var b = e.target.closest('.btn, button, [data-fb-event]');
   if (!b || typeof fbq !== 'function') return;
